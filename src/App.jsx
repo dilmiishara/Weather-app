@@ -1,10 +1,14 @@
 import { useState } from 'react'
 import search from './assets/icons/search.svg'
 import './App.css'
+import { useStateContext } from './Context'
+import { BackgroundLayout } from './Components'
 
 function App() {
 
   const [input, setInput] = useState('')
+  // const {weather} = useStateContext()
+  // console.log(weather)
 
   return (
     <div className='w-full h-screen text-white px-8'>
@@ -19,6 +23,9 @@ function App() {
           }} type="text" className='focus:outline-none w-full text-[#212121] text-lg' value={input} onChange={e=> setInput(e.target.value)}/>
         </div>
       </nav>
+      <BackgroundLayout>
+          
+      </BackgroundLayout>
     </div>
   )
 }
